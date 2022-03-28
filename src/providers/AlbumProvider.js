@@ -76,6 +76,8 @@ export const AlbumProvider = ({ children }) => {
     ]
   );
 
+  console.log('hasFilter', hasFilter);
+
   return (
     <AlbumContext.Provider value={albumContext}>
       {children}

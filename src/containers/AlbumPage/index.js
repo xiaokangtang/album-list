@@ -6,12 +6,12 @@ import SearchBar from '../SearchBar';
 import Pagination from '../Pagination';
 
 const AlbumPage = () => {
-  const { albums, loading, filteredAlbums, setFilteredAlbum, hasFilter } =
+  const { albums, loading, filteredAlbums, setFilteredAlbum } =
     useContext(AlbumContext);
   const { itemsPerPage, currentPageIndex, setCurrentPageIndex } =
     useContext(PaginateContext);
 
-  const displayedAlbums = hasFilter ? filteredAlbums : albums;
+  const displayedAlbums = filteredAlbums.length > 0 ? filteredAlbums : albums;
 
   // Get current page items
   const indexOfLastItem =
@@ -25,7 +25,7 @@ const AlbumPage = () => {
   );
 
   const filterAlbums = (inputValue) => {
-    if (hasFilter) {
+    if (inputValue) {
       const filteredResults = albums.filter((album) =>
         album['im:name']['label']
           .toLowerCase()
@@ -38,7 +38,7 @@ const AlbumPage = () => {
     setCurrentPageIndex(0);
   };
   return (
-    <div className="container">
+    <div className="p-4 md:p-8">
       <h1>Top 100 Albums</h1>
       <SearchBar filterAlbums={filterAlbums} />
       <List data={currentPageAlbums} isLoading={loading} />

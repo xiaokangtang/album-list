@@ -1,6 +1,7 @@
 // import './Pagination.css';
 import { useContext } from 'react';
 import { PaginateContext } from '../../providers/PaginateProvider';
+import Button from '../../components/Button';
 
 const Pagination = ({ dataLength }) => {
   const { itemsPerPage, currentPageIndex, setCurrentPageIndex } =
@@ -27,12 +28,12 @@ const Pagination = ({ dataLength }) => {
                 ? 'page-item active-page-item' //different styling for current page
                 : 'page-item'
             }>
-            <button
-              aria-current={currentPageIndex === number ? 'page' : null} // this tells sr current page
-              className="page-number-button"
-              onClick={() => handlePageClick(number)}>
-              {number}
-            </button>
+            <Button
+              hasCurrent={true}
+              currentValue={currentPageIndex === number ? 'page' : null}
+              onClick={() => handlePageClick(number)}
+              buttonText={number}
+            />
           </li>
         ))}
       </ul>
