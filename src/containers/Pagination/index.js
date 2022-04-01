@@ -19,18 +19,18 @@ const Pagination = ({ dataLength }) => {
 
   return (
     <nav>
-      <ul className="pagination-container">
+      <ul className="flex mt-5 p-5 gap-x-2">
         {pageNumbers.map((number) => (
           <li
             key={number}
             className={
-              currentPageIndex === number
-                ? 'page-item active-page-item' //different styling for current page
-                : 'page-item'
+              currentPageIndex + 1 === number
+                ? 'text-blue-600' //different styling for current page
+                : ''
             }>
             <Button
               hasCurrent={true}
-              currentValue={currentPageIndex === number ? 'page' : null}
+              currentValue={currentPageIndex + 1 === number ? 'page' : null}
               onClick={() => handlePageClick(number)}
               buttonText={number}
             />

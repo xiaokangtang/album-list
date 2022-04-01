@@ -10,7 +10,6 @@ const AlbumPage = () => {
     useContext(AlbumContext);
   const { itemsPerPage, currentPageIndex, setCurrentPageIndex } =
     useContext(PaginateContext);
-
   const displayedAlbums = filteredAlbums.length > 0 ? filteredAlbums : albums;
 
   // Get current page items
@@ -38,8 +37,8 @@ const AlbumPage = () => {
     setCurrentPageIndex(0);
   };
   return (
-    <div className="p-4 md:p-8">
-      <h1>Top 100 Albums</h1>
+    <div className="p-4 md:p-8 flex flex-col items-center">
+      <h1 className="text-3xl font-black">Top Albums</h1>
       <SearchBar filterAlbums={filterAlbums} />
       <List data={currentPageAlbums} isLoading={loading} />
       <Pagination dataLength={displayedAlbums.length} />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const itemsPerPage = 10;
+const itemsPerPage = 12;
 
 export const PaginateContext = React.createContext({
   itemsPerPage,

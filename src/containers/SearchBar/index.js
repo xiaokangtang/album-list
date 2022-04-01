@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Search from '../../components/Search';
-import { AlbumContext } from '../../providers/AlbumProvider';
 
 const SearchBar = ({ filterAlbums }) => {
   const [inputValue, setInputValue] = useState('');

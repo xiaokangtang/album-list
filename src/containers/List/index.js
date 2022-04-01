@@ -12,7 +12,7 @@ const List = ({ data, isLoading }) => {
       {/* <SearchBar data={data} filterData={filterData} /> */}
       {data.length > 0 ? (
         //if current data exists (initial render or filtered result exists)
-        <ul className="grid grid-cols-2 gap-x-8 gap-y-4">
+        <ul className="grid grid-cols-3 gap-x-8 gap-y-4">
           {data.map((item) => (
             <li key={item['id']['attributes']['im:id']}>
               <ListItem
