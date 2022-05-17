@@ -2,6 +2,7 @@
   "name": "album-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://xiaokangtang.github.io/album-list",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -27,7 +28,8 @@
     "test": "craco test",
     "eject": "craco eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +55,7 @@
     "@storybook/addon-links": "^6.1.20",
     "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
-    "@storybook/react": "^6.1.20"
+    "@storybook/react": "^6.1.20",
+    "gh-pages": "^4.0.0"
   }
 }
