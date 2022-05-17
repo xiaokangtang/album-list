@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/album-list/static/css/main.8c4b6c88.chunk.css",
+    "main.js": "/album-list/static/js/main.0bc4f838.chunk.js",
+    "main.js.map": "/album-list/static/js/main.0bc4f838.chunk.js.map",
+    "runtime-main.js": "/album-list/static/js/runtime-main.c4a19817.js",
+    "runtime-main.js.map": "/album-list/static/js/runtime-main.c4a19817.js.map",
+    "static/js/2.82121554.chunk.js": "/album-list/static/js/2.82121554.chunk.js",
+    "static/js/2.82121554.chunk.js.map": "/album-list/static/js/2.82121554.chunk.js.map",
+    "static/js/3.6cac22bd.chunk.js": "/album-list/static/js/3.6cac22bd.chunk.js",
+    "static/js/3.6cac22bd.chunk.js.map": "/album-list/static/js/3.6cac22bd.chunk.js.map",
+    "index.html": "/album-list/index.html",
+    "static/css/main.8c4b6c88.chunk.css.map": "/album-list/static/css/main.8c4b6c88.chunk.css.map",
+    "static/js/2.82121554.chunk.js.LICENSE.txt": "/album-list/static/js/2.82121554.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4a19817.js",
+    "static/js/2.82121554.chunk.js",
+    "static/css/main.8c4b6c88.chunk.css",
+    "static/js/main.0bc4f838.chunk.js"
+  ]
+}
