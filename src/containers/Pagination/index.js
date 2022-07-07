@@ -1,7 +1,7 @@
 // import './Pagination.css';
 import { useContext } from 'react';
 import { PaginateContext } from '../../providers/PaginateProvider';
-import Button from '../../components/Button';
+import Button from '../../ui-components/Button';
 
 const Pagination = ({ dataLength }) => {
   const { itemsPerPage, currentPageIndex, setCurrentPageIndex } =
@@ -23,17 +23,13 @@ const Pagination = ({ dataLength }) => {
         {pageNumbers.map((number) => (
           <li
             key={number}
+            aria-current={currentPageIndex + 1 === number ? 'page' : null}
             className={
               currentPageIndex + 1 === number
                 ? 'text-blue-600' //different styling for current page
                 : ''
             }>
-            <Button
-              hasCurrent={true}
-              currentValue={currentPageIndex + 1 === number ? 'page' : null}
-              onClick={() => handlePageClick(number)}
-              buttonText={number}
-            />
+            <Button onClick={() => handlePageClick(number)}></Button>
           </li>
         ))}
       </ul>
